@@ -13,7 +13,10 @@ def index():
 
 @app.route('/add')
 def add():
-    return str(request.args.get("a")) + request.args.get("b")
+    return str(
+        int(request.args.get("a")) +
+        int(request.args.get("b"))
+    )
 
 
 if __name__ == "__main__":
