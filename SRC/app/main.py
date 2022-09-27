@@ -13,6 +13,7 @@ def index():
 
 @app.route('/add')
 def add():
+    """Method Test"""
     return str(
         int(request.args.get("a")) +
         int(request.args.get("b"))
