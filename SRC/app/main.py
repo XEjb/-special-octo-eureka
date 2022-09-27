@@ -1,5 +1,6 @@
 """Simple Flask."""
 from flask import Flask
+from flask import request
 
 app = Flask(__name__)
 
@@ -9,6 +10,10 @@ def index():
     """Simple Flask method."""
     return "Hello"
 
+
+@app.route('/add')
+def add():
+    return str(request.args.get("a")) + request.args.get("b")
 
 
 if __name__ == "__main__":
