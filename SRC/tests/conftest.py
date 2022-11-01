@@ -1,4 +1,4 @@
-from app.main import ap
+from app.main import app
 import pytest
 
 @pytest.fixture()
